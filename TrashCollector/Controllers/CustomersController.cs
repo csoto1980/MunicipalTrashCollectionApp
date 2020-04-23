@@ -34,7 +34,6 @@ namespace TrashCollector.Controllers
         public async Task<IActionResult> Index()
         {
            
-            
             var applicationDbContext = _context.Customer.Include(c => c.Account).Include(c => c.Address);
             return View(await applicationDbContext.ToListAsync());
         }
