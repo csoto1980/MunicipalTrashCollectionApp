@@ -4,31 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Municipal Trash Collection</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-Lumen.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-Journal.min.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-journal.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body class="">
+<body class="backgroundImage">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <br>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Municipal Trash Collection</a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">Municipal Trash Collection</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <partial name="_LoginPartial" />
+                <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home<span class="sr-only">(current)</span></a>
                         </li>
-                        @*<li class="nav-item">
-                       <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>*@
                     </ul>
+                    <div class="text-light">
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
@@ -41,12 +38,12 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Municipal Trash Collection - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - Municipal Trash Collection
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

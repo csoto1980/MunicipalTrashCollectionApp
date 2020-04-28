@@ -3,70 +3,111 @@
 @{
     ViewData["Title"] = "Details";
 }
+<br>
+<h1 class="text-light text-center">Customer</h1>
+<h3 class="text-light text-center">Details</h3>
+<hr />
 
-<h1>Details</h1>
-
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+    <dl class="row text-light text-sm-left container-details" style="margin-left: 25%">
+        <dt class="col-sm-6">
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-16">
             @Html.DisplayFor(model => model.FirstName)
         </dd>
-        <dt class = "col-sm-2">
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.LastName)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-4">
             @Html.DisplayFor(model => model.LastName)
         </dd>
-        <dt class = "col-sm-2">
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
             @Html.DisplayNameFor(model => model.PickupDay)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-4">
             @Html.DisplayFor(model => model.PickupDay)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OneTimePickup)
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.StreetAddress)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OneTimePickup)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SuspendStart)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SuspendStart)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SuspendEnd)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SuspendEnd)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address.City)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Account)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Account.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IndentityUserId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IndentityUserId)
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.StreetAddress)
         </dd>
     </dl>
-</div>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+    </dl>
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.OneTimePickup)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.OneTimePickup)
+        </dd>
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.SuspendAccount)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.SuspendAccount)
+        </dd>
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.SuspendStart)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.SuspendStart)
+        </dd>
+    </dl>
+
+    <dl class="row text-light text-sm-left">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.SuspendEnd)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.SuspendEnd)
+        </dd>
+    </dl>
+
+</body-details>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="text-center">Edit</a> |
+    <a asp-action="Index" class="text-center">Back</a>
 </div>

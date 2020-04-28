@@ -3,72 +3,104 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<br>
+<h1 class="text-light text-center">Edit</h1>
 
-<h1>Edit</h1>
-
-<h4>Customer</h4>
+<h4 class="text-light text-center">Customer Profile</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PickupDay" class="control-label"></label>
-                <select asp-for="PickupDay" class="form-control"></select>
-                <span asp-validation-for="PickupDay" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OneTimePickup" class="control-label"></label>
-                <select asp-for="OneTimePickup" class="form-control"></select>
-                <span asp-validation-for="OneTimePickup" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuspendStart" class="control-label"></label>
-                <select asp-for="SuspendStart" class="form-control"></select>
-                <span asp-validation-for="SuspendStart" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuspendEnd" class="control-label"></label>
-                <select asp-for="SuspendEnd" class="form-control"></select>
-                <span asp-validation-for="SuspendEnd" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AddressId" class="control-label"></label>
-                <select asp-for="AddressId" class="form-control" asp-items="ViewBag.AddressId"></select>
-                <span asp-validation-for="AddressId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AccountId" class="control-label"></label>
-                <select asp-for="AccountId" class="form-control" asp-items="ViewBag.AccountId"></select>
-                <span asp-validation-for="AccountId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IndentityUserId" class="control-label"></label>
-                <input asp-for="IndentityUserId" class="form-control" />
-                <span asp-validation-for="IndentityUserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="row text-light text-center">
+    <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PickupDay" class="control-label"></label>
+                    <select asp-for="PickupDay" class="form-control" id="PickupDay" name="PickupDay">
+                        <option>Select PickupDay</option>
+                        <option>Monday</option>
+                        <option>Tuesday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                        <option>Friday</option>
+                    </select>
+                    <span asp-validation-for="PickupDay" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StreetAddress" class="control-label"></label>
+                    <input asp-for="StreetAddress" class="form-control">
+                    <span asp-validation-for="StreetAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control">
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" class="control-label"></label>
+                    <input asp-for="State" class="form-control">
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ZipCode" class="control-label"></label>
+                    <input asp-for="ZipCode" class="form-control">
+                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OneTimePickup" class="control-label"></label>
+                    <select asp-for="OneTimePickup" class="form-control" id="OneTimePickup" name="OneTimePickup">
+                        <option>Select One Time Pickup</option>
+                        <option>Monday</option>
+                        <option>Tuesday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                        <option>Friday</option>
+                        <option>None</option>
+                    </select>
+                    <span asp-validation-for="OneTimePickup" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SuspendAccount" class="control-label"></label><br>
+                    <input asp-for="SuspendAccount" type="checkbox" name="true" value="true" class="checkbox-inline" /> Yes
+                    <label class="checkbox-inline">
+                        <input asp-for="SuspendAccount" type="checkbox" name="false" value="false" class="checkbox-inline" /> No
+                        <span asp-validation-for="SuspendAccount" class="text-danger"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SuspendStart" class="control-label"></label>
+                    <input asp-for="SuspendStart" class="form-control">
+                    <span asp-validation-for="SuspendStart" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SuspendEnd" class="control-label"></label>
+                    <input asp-for="SuspendEnd" class="form-control">
+                    <span asp-validation-for="SuspendEnd" class="text-danger"></span>
+                </div>
+
+                <div class="form-group align-content-center text-center">
+                    <input type="submit" value="Save" class="btn btn-secondary text-light justify-content-md-center text-center" />
+                </div>
+                <div class="col-md-4"></div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="text-center">
+        <a asp-action="Index">Back to List</a>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

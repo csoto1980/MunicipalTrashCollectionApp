@@ -14,29 +14,29 @@ namespace TrashCollector.Data
             : base(options)
         {
         }
-        public DbSet<TrashCollector.Models.Customer> Customer { get; set; }
-        public DbSet<TrashCollector.Models.Employee> Employee { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<IdentityRole>()
-                .HasData(
-                new IdentityRole
-                {
-                    Name = "Customer",
-                    NormalizedName = "CUSTOMER"
-                }
 
-                );
-            base.OnModelCreating(builder);
             builder.Entity<IdentityRole>()
                 .HasData(
-                new IdentityRole
-                {
-                    Name = "Employee",
-                    NormalizedName = "EMPLOYEE"
-                }
+                    new IdentityRole
+                    {
+                        Name = "Customer",
+                        NormalizedName = "CUSTOMER"
+                    }
+                );
+            builder.Entity<IdentityRole>()
+                .HasData(
+                    new IdentityRole
+                    {
+                        Name = "Employee",
+                        NormalizedName = "EMPLOYEE"
+                    }
                 );
         }
     }

@@ -70,13 +70,53 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 /*--------------------------Added------------------------*/
-/*.backgroundImage {
-    background-image: url('../images/trashbackground.jpg');
+.backgroundImage {
+    background-image: url('../images/woodBackground.jpg');
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.2;
+    body-data_table
+
+{
+    text-align: center;
 }
-background-image {
-    opacity: 0.2;
-}*/
+
+.data_table {
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px;
+    width: 500px;
+}
+
+    .data_table dt, .data_table dd {
+        margin-bottom: 2px;
+        float: left;
+        display: block;
+    }
+
+    .data_table dt {
+        clear: both;
+        padding-right: 12px;
+        padding-left: 125px;
+    }
+
+dl {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+body-data_table {
+    text-align: center;
+}
+
+body-details {
+    text-align: center;
+}
+.container-details {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
